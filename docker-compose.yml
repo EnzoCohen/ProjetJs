@@ -1,0 +1,37 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+  mysql:
+    image: mysql:8.0
+    container_name: tp_csi_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword   # Mot de passe root
+      MYSQL_DATABASE: tp_csi_db               # Nom de la base de données
+      MYSQL_USER: user                    # Utilisateur
+      MYSQL_PASSWORD: userpassword        # Mot de passe de l'utilisateur
+    ports:
+      - "3306:3306"  # Expose le port MySQL
+    volumes:
+      - ./mysql_data:/var/lib/mysql       # Pour persister les données
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Fichier SQL d'initialisation
+
+  mysql-2:
+    image: mysql:8.0
+    container_name: tp_csi_mysql2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword   # Mot de passe root
+      MYSQL_DATABASE: tp_csi_db2             # Nom de la base de données
+      MYSQL_USER: user                    # Utilisateur
+      MYSQL_PASSWORD: userpassword        # Mot de passe de l'utilisateur
+    ports:
+      - "3307:3306"  # Expose le port MySQL ordi/contener
+    volumes:
+      - ./mysql_data2:/var/lib/mysql       # Pour persister les données
+      - ./init2.sql:/docker-entrypoint-initdb.d/init2.sql # Fichier SQL d'initialisation
+
+
