@@ -16,3 +16,5 @@ const Employe = sequelize.define('Employe', {
 }, { timestamps: false });
 
 module.exports = Employe;
+
+///test
