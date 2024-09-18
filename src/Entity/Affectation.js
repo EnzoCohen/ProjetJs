@@ -1,6 +1,6 @@
 // models/affectation.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../config/database.js');
 const Employe = require('./employe');
 const Projet = require('./projet');
 
