@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 
 // Configuration de la base de données
 const sequelize = new Sequelize('tp_csi_db', 'user', 'userpassword', {
-    host: 'localhost', // Le nom du service MySQL dans Docker Compose
+    host: 'mysql', // Le nom du service MySQL dans Docker Compose
     dialect: 'mysql', // Type de base de données
     port: 3306, // Port exposé dans le fichier Docker Compose
     logging: false, // Désactiver les logs SQL

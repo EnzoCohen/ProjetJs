@@ -1,8 +1,8 @@
 // models/affectation.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database.js');
-const Employe = require('./employe');
-const Projet = require('./projet');
+const sequelize = require('../../config/database');
+const Employe = require('./Employe');
+const Projet = require('./Projet');
 
 const Affectation = sequelize.define('Affectation', {
     numemp: {

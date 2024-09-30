@@ -1,6 +1,6 @@
 // models/employe.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database.js');
+const sequelize = require('../../config/database');
 
 const Employe = sequelize.define('Employe', {
     numemp: {

@@ -1,4 +1,4 @@
-const Employe = require('../models/employe');
+const Employe = require('../Entity/Employe');
 
 exports.getAllEmployes = async (req, res) => {
     try {

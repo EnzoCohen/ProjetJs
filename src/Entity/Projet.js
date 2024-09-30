@@ -1,6 +1,6 @@
 // models/projet.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database.js');
+const sequelize = require('../../config/database');
 
 const Projet = sequelize.define('Projet', {
     numprojet: {

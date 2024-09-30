@@ -1,5 +1,5 @@
 // controllers/projetController.js
-const Projet = require('../models/projet');
+const Projet = require('../Entity/Projet');
 
 exports.getAllProjets = async (req, res) => {
     try {
